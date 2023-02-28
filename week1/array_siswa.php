@@ -1,8 +1,8 @@
 <?php
 // buat data mahasiswa dan simpan ke dalam array assosiatif
-$ns1 = ['id'=>1,'nim'=>01101,'uts'=>80,'uas'=>90,'tugas'=>95];
-$ns2 = ['id'=>1,'nim'=>01102,'uts'=>85,'uas'=>90,'tugas'=>80];
-$ns3 = ['id'=>1,'nim'=>01103,'uts'=>87,'uas'=>90,'tugas'=>85];
+$ns1 = ['id'=>1,'nim'=>'01101','uts'=>80,'uas'=>90,'tugas'=>95];
+$ns2 = ['id'=>2,'nim'=>'01102','uts'=>85,'uas'=>93,'tugas'=>80];
+$ns3 = ['id'=>3,'nim'=>'01103','uts'=>87,'uas'=>95,'tugas'=>85];
 
 // simpan variable data array assosiatif ke dalam array indexing
 $ar_nilai = [$ns1, $ns2, $ns3];
@@ -17,7 +17,7 @@ $ar_nilai = [$ns1, $ns2, $ns3];
             <th>UTS</th>
             <th>UAS</th>
             <th>TUGAS</th>
-            <th>NILAI AKHIR</th>
+            <th>Nilai Akhir</th>
         </tr>
     </thead>
     <tbody>
@@ -30,7 +30,8 @@ $ar_nilai = [$ns1, $ns2, $ns3];
             echo '<td>'.$nilai['uas'].'</td>';
             echo '<td>'.$nilai['tugas'].'</td>';
             // tuliskan perhitungan nilai akhir
-            echo '</tr>';
+            $nilai_akhir = ($nilai['uts'] + $nilai['uas'] + $nilai['tugas'])/3;
+            echo '<td>'.number_format($nilai_akhir,2,',','.').'</td>';
             echo '</tr>';
             $nomor++;
         }
