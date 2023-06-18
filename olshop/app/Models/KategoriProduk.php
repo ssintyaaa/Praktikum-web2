@@ -10,6 +10,8 @@ class KategoriProduk extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $table = 'kategori_produk';
 
     protected $primary = 'id';

@@ -24,12 +24,17 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     
                                     <a class="nav-link" href="{{ url('admin/produk') }}">Produk</a>
-                                    <a class="nav-link" href="{{ url('admin/kategori_produk') }}">Kategori Produk</a>
-                                    <a class="nav-link" href="{{ url('admin/pesanan') }}">Pesanan</a>
+                                    <a class="nav-link" href="{{ url('admin/kategori') }}">Kategori Produk</a>
 
                                 </nav>
                             </div>
-                            
+                            <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Pesanan</div>
+                            <a class="nav-link" href="{{ url('admin/pesanan') }}">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                                Pesanan
+                            </a>
                           
                     
                 </nav>

@@ -14,4 +14,10 @@ class DashboardController extends Controller
     public function index_frontend(){
         return view('frontend.dashboard');
     }
+
+    public function logout(){
+        $this->middleware('guest')->except('logout');
+        return view('home');
+    }
 }
+
